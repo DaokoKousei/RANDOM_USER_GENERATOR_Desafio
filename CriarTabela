@@ -1,0 +1,22 @@
+-- Table: public.usuarios
+
+-- DROP TABLE IF EXISTS public.usuarios;
+
+CREATE TABLE IF NOT EXISTS public.usuarios
+(
+    nome character(100) COLLATE pg_catalog."default",
+    genero character(15) COLLATE pg_catalog."default",
+    data_nascimento character(100) COLLATE pg_catalog."default",
+    estado character(50) COLLATE pg_catalog."default",
+    pais character(50) COLLATE pg_catalog."default",
+    idade integer,
+    cidade character(50) COLLATE pg_catalog."default",
+    email character(110) COLLATE pg_catalog."default",
+    telefone character(30) COLLATE pg_catalog."default",
+    foto character(300) COLLATE pg_catalog."default"
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.usuarios
+    OWNER to postgres;
