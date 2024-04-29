@@ -1,0 +1,55 @@
+﻿
+@model List<RANDOM_USER_GENERATOR.Models.Usuario>
+
+
+    <h1>Lista de Usuários</h1>
+
+
+
+<table class="table table-striped" id="tabelacontatos">
+    <thead>
+  
+
+        <tr>
+            <th scope="col" bgcolor="grey" >      </th>
+            <th scope="col" bgcolor="grey" >Nome</th>
+            <th scope="col" bgcolor="grey" >Genero</th>
+            <th scope="col" bgcolor="grey" >Data de nasc.</th>
+            <th scope="col" bgcolor="grey" >Idade</th>
+            <th scope="col" bgcolor="grey" >Pais</th>
+            <th scope="col" bgcolor="grey" >Estado</th>
+            <th scope="col" bgcolor="grey" >Cidade</th>
+            <th scope="col" bgcolor="grey" >Email</th>
+            <th scope="col" bgcolor="grey" >Telefone </th>
+
+
+
+
+
+        </tr>
+
+        </tr>
+    </thead>
+    <tbody class="corpotab">
+
+        @foreach (var usuario in Model)
+        {
+            <tr>
+                <td><img src="@usuario.Foto" alt="Foto do Usuário" /></td>
+                <td>@usuario.Nome</td>
+                <td>@usuario.Genero</td>
+                <td>@usuario.Data_nascimento</td>
+                <td>@usuario.Idade</td>
+                <td>@usuario.Pais</td>
+                <td>@usuario.Estado</td>
+                <td>@usuario.Cidade</td>
+                <td>@usuario.Email</td>
+                <td>@usuario.Telefone</td>
+
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+

@@ -1,0 +1,29 @@
+﻿@model RANDOM_USER_GENERATOR.Models.RandomUserResponse
+
+
+
+
+
+
+    <h1>Dados do Usuário</h1>
+
+<img src="@Model.Results[0].Picture.Large" alt="Foto do Usuário" />
+
+
+<p> <b>Nome: </b> @Model.Results[0].Name.First</p>
+<p> <b>Gênero:  </b>@Model.Results[0].Gender</p>
+<p> <b>Data de Nascimento: </b> @Model.Results[0].Registered.Date</p>
+<p> <b>Estado:  </b>@Model.Results[0].Location.State</p>
+<p> <b>País:  </b>@Model.Results[0].Location.Country</p>
+<p> <b>Cidade:  </b>@Model.Results[0].Location.City</p>
+<p> <b>Email:  </b>@Model.Results[0].Email</p>
+<p> <b>Telefone:  </b>@Model.Results[0].Phone</p>
+    
+
+    
+
+    <form asp-controller="Home" asp-action="Index" method="post">
+        <button type="submit" class="button is-link" >Gerar Novo Usuário</button>
+    </form>
+
+  
